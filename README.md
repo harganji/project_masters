@@ -10,6 +10,19 @@ This project designs a normalized database for a car company that tracks offices
 
 A car company needs a structured database to manage products, customers, orders, payments, employees, and office locations. Without a relational design, the company would face duplicated data, weak reporting, inconsistent payment tracking, and limited visibility into sales and inventory performance.
 
+## Repository Structure
+
+```text
+project_masters/
+  sql/
+  docs/
+  dashboard/
+  outputs/
+  scripts/
+  assets/
+  README.md
+```
+
 ## Business Questions Answered
 
 - Which products generate the highest sales revenue?
@@ -44,24 +57,23 @@ A car company needs a structured database to manage products, customers, orders,
 
 | File | Purpose |
 | --- | --- |
-| `01_create_database_sql_server.sql` | SQL Server database and table creation |
-| `02_insert_sample_data_sql_server.sql` | SQL Server sample data inserts |
-| `03_business_analysis_queries.sql` | Business analysis SQL queries |
-| `04_dashboard_views_mysql.sql` | MySQL views for dashboarding |
-| `mysql_version.sql` | Full MySQL-compatible database build script |
-| `data_dictionary.md` | Table and column definitions |
-| `erd.md` | ERD documentation |
-| `project_report.md` | Project report and explanation |
-| `original_pdf_summary.md` | Summary of original masters project reference |
-| `car_company_dashboard.png` | Dashboard image preview |
-| `car_company_dashboard.html` | Browser-viewable dashboard preview |
-| `car_company_tableau_starter.twb` | Tableau starter workbook |
-| `car_company_dashboard_data.csv` | Dashboard-ready data extract |
-| `power_bi_pbix_creation_steps.md` | Steps to create the `.pbix` in Power BI Desktop |
-| `visualization_guide_powerbi_tableau.md` | Power BI/Tableau visualization guide |
-| `product_revenue.csv`, `customer_revenue.csv`, `employee_revenue.csv`, `office_revenue.csv` | Business output tables |
-| `order_status_summary.csv`, `low_stock_products.csv`, `payment_method_summary.csv` | Operational output tables |
-| `project_output_summary.txt` | Summary of generated outputs |
+| [`sql/01_create_database_sql_server.sql`](sql/01_create_database_sql_server.sql) | SQL Server database and table creation |
+| [`sql/02_insert_sample_data_sql_server.sql`](sql/02_insert_sample_data_sql_server.sql) | SQL Server sample data inserts |
+| [`sql/03_business_analysis_queries.sql`](sql/03_business_analysis_queries.sql) | Business analysis SQL queries |
+| [`sql/04_dashboard_views_mysql.sql`](sql/04_dashboard_views_mysql.sql) | MySQL views for dashboarding |
+| [`sql/mysql_version.sql`](sql/mysql_version.sql) | Full MySQL-compatible database build script |
+| [`docs/data_dictionary.md`](docs/data_dictionary.md) | Table and column definitions |
+| [`docs/erd.md`](docs/erd.md) | ERD documentation |
+| [`docs/project_report.md`](docs/project_report.md) | Project report and explanation |
+| [`docs/visualization_guide_powerbi_tableau.md`](docs/visualization_guide_powerbi_tableau.md) | Power BI/Tableau visualization guide |
+| [`assets/original_pdf_summary.md`](assets/original_pdf_summary.md) | Summary of original masters project reference |
+| [`dashboard/car_company_dashboard.png`](dashboard/car_company_dashboard.png) | Dashboard image preview |
+| [`dashboard/car_company_dashboard.html`](dashboard/car_company_dashboard.html) | Browser-viewable dashboard preview |
+| [`dashboard/car_company_tableau_starter.twb`](dashboard/car_company_tableau_starter.twb) | Tableau starter workbook |
+| [`dashboard/car_company_dashboard_data.csv`](dashboard/car_company_dashboard_data.csv) | Dashboard-ready data extract |
+| [`dashboard/power_bi_pbix_creation_steps.md`](dashboard/power_bi_pbix_creation_steps.md) | Steps to create the `.pbix` in Power BI Desktop |
+| [`outputs/`](outputs/) | Business output tables and summary |
+| [`scripts/`](scripts/) | Dashboard and output generation scripts |
 
 ## Database Design Improvements
 
@@ -94,11 +106,11 @@ This repository includes Tableau-ready dashboard assets and dashboard preview fi
 
 Dashboard preview files:
 
-- [Car Company Dashboard PNG](car_company_dashboard.png)
-- [Car Company Dashboard HTML](car_company_dashboard.html)
-- [Tableau Starter Workbook](car_company_tableau_starter.twb)
-- [Dashboard Data CSV](car_company_dashboard_data.csv)
-- [Power BI PBIX Creation Steps](power_bi_pbix_creation_steps.md)
+- [Car Company Dashboard PNG](dashboard/car_company_dashboard.png)
+- [Car Company Dashboard HTML](dashboard/car_company_dashboard.html)
+- [Tableau Starter Workbook](dashboard/car_company_tableau_starter.twb)
+- [Dashboard Data CSV](dashboard/car_company_dashboard_data.csv)
+- [Power BI PBIX Creation Steps](dashboard/power_bi_pbix_creation_steps.md)
 
 ## Output Summary
 
@@ -120,23 +132,23 @@ Generated outputs show:
 SQL Server:
 
 ```sql
-01_create_database_sql_server.sql
-02_insert_sample_data_sql_server.sql
-03_business_analysis_queries.sql
+sql/01_create_database_sql_server.sql
+sql/02_insert_sample_data_sql_server.sql
+sql/03_business_analysis_queries.sql
 ```
 
 MySQL:
 
 ```sql
-mysql_version.sql
+sql/mysql_version.sql
 ```
 
 Generate dashboard/output assets:
 
 ```bash
-python create_dashboard_visuals.py
-python create_bi_workbook_assets.py
-python generate_outputs.py
+python scripts/create_dashboard_visuals.py
+python scripts/create_bi_workbook_assets.py
+python scripts/generate_outputs.py
 ```
 
 ## Interview Story
