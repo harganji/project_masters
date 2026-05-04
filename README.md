@@ -1,145 +1,146 @@
 # Car Company Database Management System
 
-This repository recreates and upgrades a masters-level database project for a car company. The project designs a normalized relational database to manage customers, employees, offices, products, orders, order line items, and payments.
+Relational database design and SQL analytics project for a car company, rebuilt from a masters-level database assignment and upgraded into a recruiter-ready portfolio case study.
 
-## Project Objective
+## Portfolio Summary
 
-The goal of this project is to design a reliable database system for a car company that can track customer purchases, product inventory, order fulfillment, employee assignments, office locations, and customer payments. The database supports operational reporting and business analysis such as sales performance, inventory status, customer payment behavior, and employee sales contribution.
+This project designs a normalized database for a car company that tracks offices, employees, customers, products, orders, order details, and payments. It includes SQL Server and MySQL scripts, business analysis queries, ERD documentation, output CSVs, and Tableau-ready dashboard assets.
 
-## Business Scenario
+## Business Problem
 
-A car company sells multiple car models through different offices. Customers place orders for one or more products, employees manage customer relationships, and payments are recorded against completed purchases. The company needs a structured database to avoid duplicate data, enforce relationships, and answer business questions through SQL.
+A car company needs a structured database to manage products, customers, orders, payments, employees, and office locations. Without a relational design, the company would face duplicated data, weak reporting, inconsistent payment tracking, and limited visibility into sales and inventory performance.
 
-## Key Business Questions
+## Business Questions Answered
 
 - Which products generate the highest sales revenue?
 - Which customers have placed the most valuable orders?
-- Which offices and employees contribute most to sales?
-- Which orders are shipped, pending, cancelled, or delayed?
+- Which employees and offices contribute most to sales?
+- Which orders are shipped, pending, in process, or on hold?
 - Which products are low in stock and need replenishment?
 - Are customer payments aligned with order totals?
-
-## Database Entities
-
-- `Offices`: Stores company office locations.
-- `Employees`: Stores employee details and office assignment.
-- `Customers`: Stores customer contact details and assigned sales representative.
-- `Products`: Stores car product information, model year, stock, and price.
-- `Orders`: Stores order headers, status, order date, and shipping date.
-- `OrderDetails`: Stores products and quantities inside each order.
-- `Payments`: Stores customer payment transactions.
-
-## Repository Structure
-
-```text
-project_masters_car_company_database/
-  sql/
-    01_create_database_sql_server.sql
-    02_insert_sample_data_sql_server.sql
-    03_business_analysis_queries.sql
-    mysql_version.sql
-  docs/
-    data_dictionary.md
-    erd.md
-    project_report.md
-  outputs/
-    business query output CSV files
-  assets/
-    original_pdf_summary.md
-  README.md
-```
 
 ## Tools Used
 
 - SQL Server / T-SQL
-- MySQL-compatible script
-- Tableau dashboard starter workbook
-- Power BI dashboard plan for future `.pbix` creation
+- MySQL-compatible SQL
 - Relational database design
 - ERD modeling
-- Normalization
-- Primary keys and foreign keys
-- SQL joins, aggregation, CTEs, and window functions
+- Primary keys, foreign keys, and constraints
+- SQL joins, CTEs, aggregation, and window functions
+- Tableau starter workbook and dashboard assets
+- Power BI dashboard planning for future `.pbix` creation
 
-## Project Improvements Over the Original
+## Database Entities
 
-The original project document had the core table idea, but this rebuilt version improves the project by:
+- `Offices`: Company office locations
+- `Employees`: Employee details and office assignment
+- `Customers`: Customer contact details and assigned sales representative
+- `Products`: Car model details, stock, and price
+- `Orders`: Order headers, customer, date, status, and shipping date
+- `OrderDetails`: Product line items inside each order
+- `Payments`: Customer payment transactions
 
-- Adding proper foreign key relationships
-- Fixing data types such as phone numbers and monetary values
-- Replacing weak one-to-one assumptions with realistic one-to-many relationships
-- Adding identity keys where needed
+## Files Included
+
+| File | Purpose |
+| --- | --- |
+| `01_create_database_sql_server.sql` | SQL Server database and table creation |
+| `02_insert_sample_data_sql_server.sql` | SQL Server sample data inserts |
+| `03_business_analysis_queries.sql` | Business analysis SQL queries |
+| `04_dashboard_views_mysql.sql` | MySQL views for dashboarding |
+| `mysql_version.sql` | Full MySQL-compatible database build script |
+| `data_dictionary.md` | Table and column definitions |
+| `erd.md` | ERD documentation |
+| `project_report.md` | Project report and explanation |
+| `original_pdf_summary.md` | Summary of original masters project reference |
+| `car_company_dashboard.png` | Dashboard image preview |
+| `car_company_dashboard.html` | Browser-viewable dashboard preview |
+| `car_company_tableau_starter.twb` | Tableau starter workbook |
+| `car_company_dashboard_data.csv` | Dashboard-ready data extract |
+| `power_bi_pbix_creation_steps.md` | Steps to create the `.pbix` in Power BI Desktop |
+| `visualization_guide_powerbi_tableau.md` | Power BI/Tableau visualization guide |
+| `product_revenue.csv`, `customer_revenue.csv`, `employee_revenue.csv`, `office_revenue.csv` | Business output tables |
+| `order_status_summary.csv`, `low_stock_products.csv`, `payment_method_summary.csv` | Operational output tables |
+| `project_output_summary.txt` | Summary of generated outputs |
+
+## Database Design Improvements
+
+The original assignment contained the core table idea. This rebuilt version improves it by:
+
+- Adding proper primary key and foreign key relationships
+- Fixing data types such as phone numbers and currency values
+- Replacing unrealistic one-to-one assumptions with realistic one-to-many relationships
 - Adding payment tracking with order references
-- Adding business analysis SQL queries
-- Adding data dictionary and ERD documentation
-- Providing both SQL Server and MySQL-compatible scripts
+- Adding SQL constraints for data quality
+- Adding business analysis queries and dashboard outputs
+- Adding ERD, data dictionary, and project report documentation
 
-## How to Run in SQL Server
+## SQL Analysis Included
 
-1. Open SQL Server Management Studio.
-2. Run:
+- Customer order detail report
+- Product revenue ranking
+- Customer lifetime revenue
+- Employee sales contribution
+- Office revenue performance
+- Payment reconciliation
+- Low-stock product report
+- Shipping performance
+- Monthly revenue trend
+- Pending and incomplete orders
+
+## Dashboard and Visualization
+
+This repository includes Tableau-ready dashboard assets and dashboard preview files. A Power BI `.pbix` can be created from the included dashboard data and Power BI guide, but the repository currently includes the Tableau starter workbook and visual preview files.
+
+Dashboard preview files:
+
+- [Car Company Dashboard PNG](car_company_dashboard.png)
+- [Car Company Dashboard HTML](car_company_dashboard.html)
+- [Tableau Starter Workbook](car_company_tableau_starter.twb)
+- [Dashboard Data CSV](car_company_dashboard_data.csv)
+- [Power BI PBIX Creation Steps](power_bi_pbix_creation_steps.md)
+
+## Output Summary
+
+Generated outputs show:
+
+- Total revenue: `$616,382.00`
+- Total orders: `8`
+- Total customers: `7`
+- Total products: `7`
+- Total paid amount: `$527,698.00`
+- Low-stock products: `3`
+- Top product by revenue: `Texus YX`
+- Top customer by revenue: `Harry Jackson`
+- Top employee by revenue handled: `John Carter`
+- Top office by revenue: `Austin`
+
+## How to Run
+
+SQL Server:
 
 ```sql
-sql/01_create_database_sql_server.sql
+01_create_database_sql_server.sql
+02_insert_sample_data_sql_server.sql
+03_business_analysis_queries.sql
 ```
 
-3. Run:
+MySQL:
 
 ```sql
-sql/02_insert_sample_data_sql_server.sql
+mysql_version.sql
 ```
 
-4. Run:
+Generate dashboard/output assets:
 
-```sql
-sql/03_business_analysis_queries.sql
+```bash
+python create_dashboard_visuals.py
+python create_bi_workbook_assets.py
+python generate_outputs.py
 ```
 
-## How to Run in MySQL
+## Interview Story
 
-Run the single MySQL script:
+I rebuilt this database project from an original academic assignment and upgraded it into a business-focused analytics project. I redesigned the schema, corrected relationships and data types, added SQL Server and MySQL implementations, created business reporting queries, generated output files, and built Tableau-ready dashboard assets.
 
-```sql
-sql/mysql_version.sql
-```
-
-## Sample Insights
-
-- Revenue can be analyzed by product, customer, office, and employee.
-- Low-stock products can be identified before inventory shortages occur.
-- Pending and delayed orders can be monitored using order and shipping dates.
-- Payment coverage can be compared against order totals.
-- Employee sales contribution can be measured through assigned customers.
-
-## Output Files
-
-The project includes generated CSV outputs for the main business queries:
-
-- [outputs/product_revenue.csv](outputs/product_revenue.csv)
-- [outputs/customer_revenue.csv](outputs/customer_revenue.csv)
-- [outputs/employee_revenue.csv](outputs/employee_revenue.csv)
-- [outputs/office_revenue.csv](outputs/office_revenue.csv)
-- [outputs/order_status_summary.csv](outputs/order_status_summary.csv)
-- [outputs/low_stock_products.csv](outputs/low_stock_products.csv)
-- [outputs/payment_method_summary.csv](outputs/payment_method_summary.csv)
-- [outputs/project_output_summary.txt](outputs/project_output_summary.txt)
-
-## Visualization Guide
-
-This project includes Tableau-ready dashboard assets and a separate Power BI/Tableau dashboard guide:
-
-[docs/visualization_guide_powerbi_tableau.md](docs/visualization_guide_powerbi_tableau.md)
-
-The guide covers dashboard pages, KPIs, visuals, Power BI DAX measures, Tableau calculated fields, and presentation storytelling. A `.pbix` file can be created from the included dashboard data and Power BI guide, but this repository currently includes the Tableau starter workbook and dashboard preview files.
-
-Dashboard files included:
-
-- [dashboard/car_company_dashboard.png](dashboard/car_company_dashboard.png)
-- [dashboard/car_company_dashboard.html](dashboard/car_company_dashboard.html)
-- [dashboard/car_company_tableau_starter.twb](dashboard/car_company_tableau_starter.twb)
-- [dashboard/car_company_dashboard_data.csv](dashboard/car_company_dashboard_data.csv)
-- [dashboard/power_bi_pbix_creation_steps.md](dashboard/power_bi_pbix_creation_steps.md)
-
-## Interview Summary
-
-This project demonstrates the ability to design a normalized relational database from a business problem, implement it with SQL, enforce data integrity through constraints, populate sample records, and write analytical queries that support business decision-making.
+This project demonstrates database design, SQL implementation, data integrity, business analysis, and dashboard storytelling.
