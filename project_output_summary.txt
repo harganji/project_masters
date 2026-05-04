@@ -1,0 +1,13 @@
+Car Company Database - Output Summary
+
+Total revenue: $616,382.00
+Total orders: 8
+Total customers: 7
+Total products: 7
+Total paid amount: $527,698.00
+Low-stock products: 3
+
+Top product by revenue: Texus YX ($140,982.00)
+Top customer by revenue: Harry Jackson ($164,402.00)
+Top employee by revenue handled: John Carter ($234,836.00)
+Top office by revenue: Austin ($234,836.00)

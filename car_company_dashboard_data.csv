@@ -1,0 +1,10 @@
+orderLineNumber,orderNumber,productCode,quantitiesOrdered,priceOfEach,orderDate,customerNumber,status,productName,quantityInStock,priceOfProduct,customerName,city,salesRepEmployeeNumber,employeeNumber,employeeName,jobTitle,officeCode,officeCity,country,paidAmount,paymentMethod,lineRevenue,balanceDue
+1,1,1,2,23456.0,2020-09-09,234,Shipped,Texus RX,10,23456.0,Harry Jackson,Austin,12345,12345,John Carter,Sales Manager,4568,Austin,USA,46912.0,Credit Card,46912.0,0.0
+2,2,2,3,23478.0,2020-03-09,235,Pending,Texus LX,40,23478.0,James Harrison,Houston,12345,12345,John Carter,Sales Manager,4568,Austin,USA,35000.0,Bank Transfer,70434.0,35434.0
+3,3,1,4,23456.0,2020-04-09,236,Shipped,Texus RX,10,23456.0,Giri Patel,San Diego,12346,12346,Sam Wilson,Product Technician,4569,Chicago,USA,93824.0,Credit Card,93824.0,0.0
+4,4,4,5,23498.0,2020-05-09,234,Shipped,Texus UX,50,23498.0,Harry Jackson,Austin,12345,12345,John Carter,Sales Manager,4568,Austin,USA,117490.0,Wire Transfer,117490.0,0.0
+5,5,5,5,23497.0,2020-04-09,237,Shipped,Texus YX,60,23497.0,Anvesh Rao,Texas,12349,12349,Sim Brown,Project Manager,4571,Colorado,USA,117485.0,Credit Card,117485.0,0.0
+6,6,6,1,38450.0,2020-07-15,238,In Process,Texus Sport,8,38450.0,Siri Mehta,San Francisco,12347,12347,Kathy Smith,Product Technician,4567,Newark,USA,20000.0,Debit Card,38450.0,18450.0
+7,7,7,2,42400.0,2020-08-21,239,On Hold,Texus EV,15,42400.0,Maria Lopez,Chicago,12346,12346,Sam Wilson,Product Technician,4569,Chicago,USA,50000.0,Bank Transfer,84800.0,34800.0
+8,8,3,1,23490.0,2020-11-03,240,Shipped,Texus MX,20,23490.0,David Kim,Denver,12349,12349,Sim Brown,Project Manager,4571,Colorado,USA,46987.0,Credit Card,23490.0,-23497.0
+9,8,5,1,23497.0,2020-11-03,240,Shipped,Texus YX,60,23497.0,David Kim,Denver,12349,12349,Sim Brown,Project Manager,4571,Colorado,USA,46987.0,Credit Card,23497.0,-23490.0

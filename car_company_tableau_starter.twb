@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook version='2024.1' source-build='2024.1.0'>
+  <document-format-change-manifest />
+  <datasources>
+    <datasource caption='Car Company Dashboard Data' inline='true' name='car_company_dashboard_data' version='2024.1'>
+      <connection class='textscan' directory='C:\Users\saiha\Desktop\project job\project_masters_car_company_database\dashboard' filename='car_company_dashboard_data.csv' password='' server='' />
+      <column caption='Product Name' datatype='string' name='[productName]' role='dimension' type='nominal' />
+      <column caption='Customer Name' datatype='string' name='[customerName]' role='dimension' type='nominal' />
+      <column caption='Employee Name' datatype='string' name='[employeeName]' role='dimension' type='nominal' />
+      <column caption='Office City' datatype='string' name='[officeCity]' role='dimension' type='nominal' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Line Revenue' datatype='real' name='[lineRevenue]' role='measure' type='quantitative' />
+      <column caption='Paid Amount' datatype='real' name='[paidAmount]' role='measure' type='quantitative' />
+      <column caption='Balance Due' datatype='real' name='[balanceDue]' role='measure' type='quantitative' />
+      <column caption='Quantity In Stock' datatype='integer' name='[quantityInStock]' role='measure' type='quantitative' />
+      <column caption='Quantity Ordered' datatype='integer' name='[quantitiesOrdered]' role='measure' type='quantitative' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Open Data Source'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Car Company Dashboard Data' name='car_company_dashboard_data' />
+          </datasources>
+        </view>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Car Company Dashboard Starter'>
+      <style />
+      <zones />
+    </dashboard>
+  </dashboards>
+</workbook>

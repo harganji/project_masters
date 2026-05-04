@@ -1,0 +1,5 @@
+paymentMethod,payments,paidAmount
+Credit Card,4,305208.0
+Wire Transfer,1,117490.0
+Bank Transfer,2,85000.0
+Debit Card,1,20000.0

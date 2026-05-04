@@ -1,0 +1,188 @@
+
+    <!doctype html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Car Company Dashboard</title>
+      <style>
+        body { font-family: Arial, sans-serif; margin: 32px; color: #1f2933; background: #f7f9fb; }
+        .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px; }
+        .card { background: white; border: 1px solid #d9e2ec; padding: 18px; border-radius: 8px; }
+        .card span { display: block; color: #52606d; font-size: 13px; }
+        .card strong { display: block; font-size: 24px; margin-top: 8px; }
+        img { max-width: 100%; border: 1px solid #d9e2ec; border-radius: 8px; background: white; }
+        section { background: white; border: 1px solid #d9e2ec; border-radius: 8px; padding: 18px; margin-top: 18px; }
+        .data-table { border-collapse: collapse; width: 100%; }
+        .data-table th, .data-table td { border-bottom: 1px solid #e5e7eb; padding: 8px; text-align: left; }
+      </style>
+    </head>
+    <body>
+      <h1>Car Company Database Dashboard</h1>
+      <div class="cards">
+        <div class="card"><span>Total Revenue</span><strong>$616,382</strong></div>
+        <div class="card"><span>Total Orders</span><strong>8</strong></div>
+        <div class="card"><span>Total Customers</span><strong>7</strong></div>
+        <div class="card"><span>Total Paid</span><strong>$527,698</strong></div>
+      </div>
+      <img src="car_company_dashboard.png" alt="Car company dashboard">
+      <section><h2>Product Revenue</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>productName</th>
+      <th>lineRevenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Texus YX</td>
+      <td>140982.0</td>
+    </tr>
+    <tr>
+      <td>Texus RX</td>
+      <td>140736.0</td>
+    </tr>
+    <tr>
+      <td>Texus UX</td>
+      <td>117490.0</td>
+    </tr>
+    <tr>
+      <td>Texus EV</td>
+      <td>84800.0</td>
+    </tr>
+    <tr>
+      <td>Texus LX</td>
+      <td>70434.0</td>
+    </tr>
+    <tr>
+      <td>Texus Sport</td>
+      <td>38450.0</td>
+    </tr>
+    <tr>
+      <td>Texus MX</td>
+      <td>23490.0</td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h2>Customer Revenue</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>customerName</th>
+      <th>lineRevenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Harry Jackson</td>
+      <td>164402.0</td>
+    </tr>
+    <tr>
+      <td>Anvesh Rao</td>
+      <td>117485.0</td>
+    </tr>
+    <tr>
+      <td>Giri Patel</td>
+      <td>93824.0</td>
+    </tr>
+    <tr>
+      <td>Maria Lopez</td>
+      <td>84800.0</td>
+    </tr>
+    <tr>
+      <td>James Harrison</td>
+      <td>70434.0</td>
+    </tr>
+    <tr>
+      <td>David Kim</td>
+      <td>46987.0</td>
+    </tr>
+    <tr>
+      <td>Siri Mehta</td>
+      <td>38450.0</td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h2>Employee Revenue</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>employeeName</th>
+      <th>lineRevenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John Carter</td>
+      <td>234836.0</td>
+    </tr>
+    <tr>
+      <td>Sam Wilson</td>
+      <td>178624.0</td>
+    </tr>
+    <tr>
+      <td>Sim Brown</td>
+      <td>164472.0</td>
+    </tr>
+    <tr>
+      <td>Kathy Smith</td>
+      <td>38450.0</td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h2>Low Stock Products</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>productCode</th>
+      <th>productName</th>
+      <th>quantityInStock</th>
+      <th>priceOfProduct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Texus RX</td>
+      <td>10</td>
+      <td>23456.0</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Texus Sport</td>
+      <td>8</td>
+      <td>38450.0</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Texus EV</td>
+      <td>15</td>
+      <td>42400.0</td>
+    </tr>
+  </tbody>
+</table></section>
+<section><h2>Payment by Method</h2><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>paymentMethod</th>
+      <th>amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Credit Card</td>
+      <td>305208.0</td>
+    </tr>
+    <tr>
+      <td>Wire Transfer</td>
+      <td>117490.0</td>
+    </tr>
+    <tr>
+      <td>Bank Transfer</td>
+      <td>85000.0</td>
+    </tr>
+    <tr>
+      <td>Debit Card</td>
+      <td>20000.0</td>
+    </tr>
+  </tbody>
+</table></section>
+    </body>
+    </html>
+    
